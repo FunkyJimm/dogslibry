@@ -1,9 +1,14 @@
-package model;
+package com.funkyjimm.dogslibry.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Dog {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String breedName;
     private String dogGroup;
     private float dogSize;
@@ -11,6 +16,7 @@ public class Dog {
     private String dogOrigin;
     private String dogDescription;
 
+    @ManyToMany(mappedBy = "dogs")
     private Set<Classification> dogClassifications = new HashSet<>();
 
     public Dog() {
@@ -23,6 +29,14 @@ public class Dog {
         this.dogWeight = dogWeight;
         this.dogOrigin = dogOrigin;
         this.dogDescription = dogDescription;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getBreedName() {
