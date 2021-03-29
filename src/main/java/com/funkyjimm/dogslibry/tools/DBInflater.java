@@ -82,7 +82,9 @@ public class DBInflater implements ApplicationListener<ContextRefreshedEvent> {
 
         // Dogs breeds
         Dog akita = new Dog("Akita", group5, 71, 45, japan, "Rasa psa zaliczana do grupy szpiców i psów pierwotnych. Wyhodowana w Japonii pierwotnie do walk psów, później użytkowana również do polowań. Współcześnie pełni funkcje psa stróżująco-obronnego oraz psa do towarzystwa. Jest to największa rasa spośród ras japońskich. Nie podlega próbom pracy.");
+        akita.getDogClassifications().add(akcWorkingGroup);
+        akcWorkingGroup.getDogs().add(akita);
         dogRepository.save(akita);
-
+        classificationRepository.save(akcWorkingGroup);
     }
 }

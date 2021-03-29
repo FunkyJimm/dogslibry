@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Klasyfikacja</title>
+</head>
+<body>
+    <h1>Klasyfikacja</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nazwa organizacji</th>
+            <th>Klasyfikacja</th>
+        </tr>
+        <tr th:each="classification : ${classifications}">
+            <td th:text="${classification.id}"></td>
+            <td th:text="${classification.organizationName}"></td>
+            <td th:text="${classification.classificationType}"></td>
+        </tr>
+    </table>
+</body>
+</html>

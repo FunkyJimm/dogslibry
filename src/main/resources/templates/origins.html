@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pochodzenia</title>
+</head>
+<body>
+<h1>Pochodzenia</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Państwo</th>
+        <th>Stolica</th>
+    </tr>
+    <tr th:each="origin : ${origins}">
+        <td th:text="${origin.id}"></td>
+        <td th:text="${origin.countryName}"></td>
+        <td th:text="${origin.countryCapital}"></td>
+    </tr>
+</table>
+</body>
+</html>
