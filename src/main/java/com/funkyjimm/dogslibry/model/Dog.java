@@ -14,6 +14,7 @@ public class Dog {
     private float dogSize;
     private float dogWeight;
     private String dogOrigin;
+    @Lob
     private String dogDescription;
 
     @ManyToMany(mappedBy = "dogs")

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Psy</title>
+</head>
+<body>
+    <h1>Psy</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Rasa</th>
+            <th>Grupa</th>
+            <th>Wysokość</th>
+            <th>Waga</th>
+            <th>Pochodzenie</th>
+            <th>Opis</th>
+        </tr>
+        <tr th:each="dog : ${dogs}">
+            <td th:text="${dog.id}"></td>
+            <td th:text="${dog.breedName}"></td>
+            <td th:text="${dog.dogGroup}"></td>
+            <td th:text="${dog.dogSize}"></td>
+            <td th:text="${dog.dogWeight}"></td>
+            <td th:text="${dog.dogOrigin}"></td>
+            <td th:text="${dog.dogDescription}"></td>
+        </tr>
+    </table>
+</body>
+</html>
