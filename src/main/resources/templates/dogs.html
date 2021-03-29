@@ -20,10 +20,10 @@
         <tr th:each="dog : ${dogs}">
             <td th:text="${dog.id}"></td>
             <td th:text="${dog.breedName}"></td>
-            <td th:text="${dog.dogGroup}"></td>
+            <td th:text="${dog.dogGroup.groupName}"></td>
             <td th:text="${dog.dogSize}"></td>
             <td th:text="${dog.dogWeight}"></td>
-            <td th:text="${dog.dogOrigin}"></td>
+            <td th:text="${dog.dogOrigin.countryName}"></td>
             <td th:text="${dog.dogDescription}"></td>
         </tr>
     </table>

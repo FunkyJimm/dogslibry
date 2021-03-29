@@ -73,7 +73,7 @@ public class DBInflater implements ApplicationListener<ContextRefreshedEvent> {
         dogGroupRepository.save(group10);
 
         // Dogs origins and short details
-        Origin japan = new Origin("Japoni", "Tokio");
+        Origin japan = new Origin("Japonia", "Tokio");
         Origin poland = new Origin("Polska", "Warszawa");
         Origin germany = new Origin("Niemcy", "Berlin");
         originRepository.save(japan);
@@ -81,7 +81,7 @@ public class DBInflater implements ApplicationListener<ContextRefreshedEvent> {
         originRepository.save(germany);
 
         // Dogs breeds
-        Dog akita = new Dog("Akita", "Grupa V", 71, 45, "Japonia", "Rasa psa zaliczana do grupy szpiców i psów pierwotnych. Wyhodowana w Japonii pierwotnie do walk psów, później użytkowana również do polowań. Współcześnie pełni funkcje psa stróżująco-obronnego oraz psa do towarzystwa. Jest to największa rasa spośród ras japońskich. Nie podlega próbom pracy.");
+        Dog akita = new Dog("Akita", group5, 71, 45, japan, "Rasa psa zaliczana do grupy szpiców i psów pierwotnych. Wyhodowana w Japonii pierwotnie do walk psów, później użytkowana również do polowań. Współcześnie pełni funkcje psa stróżująco-obronnego oraz psa do towarzystwa. Jest to największa rasa spośród ras japońskich. Nie podlega próbom pracy.");
         dogRepository.save(akita);
 
     }

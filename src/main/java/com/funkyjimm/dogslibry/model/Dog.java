@@ -10,10 +10,12 @@ public class Dog {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String breedName;
-    private String dogGroup;
+    @ManyToOne
+    private DogGroup dogGroup;
     private float dogSize;
     private float dogWeight;
-    private String dogOrigin;
+    @ManyToOne
+    private Origin dogOrigin;
     @Lob
     private String dogDescription;
 
@@ -23,7 +25,7 @@ public class Dog {
     public Dog() {
     }
 
-    public Dog(String breedName, String dogGroup, float dogSize, float dogWeight, String dogOrigin, String dogDescription) {
+    public Dog(String breedName, DogGroup dogGroup, float dogSize, float dogWeight, Origin dogOrigin, String dogDescription) {
         this.breedName = breedName;
         this.dogGroup = dogGroup;
         this.dogSize = dogSize;
@@ -48,11 +50,11 @@ public class Dog {
         this.breedName = breedName;
     }
 
-    public String getDogGroup() {
+    public DogGroup getDogGroup() {
         return dogGroup;
     }
 
-    public void setDogGroup(String dogGroup) {
+    public void setDogGroup(DogGroup dogGroup) {
         this.dogGroup = dogGroup;
     }
 
@@ -72,11 +74,11 @@ public class Dog {
         this.dogWeight = dogWeight;
     }
 
-    public String getDogOrigin() {
+    public Origin getDogOrigin() {
         return dogOrigin;
     }
 
-    public void setDogOrigin(String dogOrigin) {
+    public void setDogOrigin(Origin dogOrigin) {
         this.dogOrigin = dogOrigin;
     }
 

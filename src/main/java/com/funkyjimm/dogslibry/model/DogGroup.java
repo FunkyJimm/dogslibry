@@ -7,15 +7,15 @@ public class DogGroup {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String gName;
-    private String gDescription;
+    private String groupName;
+    private String groupDescription;
 
     public DogGroup() {
     }
 
-    public DogGroup(String gName, String gDescription) {
-        this.gName = gName;
-        this.gDescription = gDescription;
+    public DogGroup(String groupName, String groupDescription) {
+        this.groupName = groupName;
+        this.groupDescription = groupDescription;
     }
 
     public Long getId() {
@@ -26,27 +26,27 @@ public class DogGroup {
         this.id = id;
     }
 
-    public String getgName() {
-        return gName;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setgName(String gName) {
-        this.gName = gName;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
-    public String getgDescription() {
-        return gDescription;
+    public String getGroupDescription() {
+        return groupDescription;
     }
 
-    public void setgDescription(String gDescription) {
-        this.gDescription = gDescription;
+    public void setGroupDescription(String groupDescription) {
+        this.groupDescription = groupDescription;
     }
 
     @Override
     public String toString() {
         return "DogGroup{" +
-                "gName='" + gName + '\'' +
-                ", gDescription='" + gDescription + '\'' +
+                "groupName='" + groupName + '\'' +
+                ", groupDescription='" + groupDescription + '\'' +
                 '}';
     }
 }
